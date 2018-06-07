@@ -14,7 +14,7 @@ output = 'amazon_utf_problems_ftfy.csv'
 newFile = open(output, 'w') #wb for windows, else you'll see newlines added to csv
 
 # open the file from console arguments
-with open(filename) as csvfile:
+with open(filename, 'r', encoding='utf8') as csvfile:
 	reader = csv.DictReader(csvfile)
 	for row in reader:
 		newCsv.append(row)
